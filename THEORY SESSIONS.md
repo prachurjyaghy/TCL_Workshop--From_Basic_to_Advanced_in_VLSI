@@ -126,20 +126,45 @@ You can give your email for support required for the user to understand the flow
   9. Then link my_arr will convert this colunxrow format into array. THe array will act like a coordinate to extract and store data
   10. A counter increment is required to access all the data using a loop
 
-#### Auto creation of the first variable - DesignName and COmpletion 
+#### Auto creation of the first variable - DesignName and Completion 
   1. Variables set to for the filename, matrix , columns , rows and counter
      ![image](https://github.com/user-attachments/assets/f43aae70-677d-46a3-a8eb-acb6eae1981b)
-  2. ENter into a loop. Put a meessage for the array value. With each increment of the value i, the array data will be displayed for the user. (\n is new line)
+  2. Enter into a loop. Put a meessage for the array value. With each increment of the value i, the array data will be displayed for the user. (\n is new line)
     ![image](https://github.com/user-attachments/assets/d180b262-b484-4d3e-8e33-98bf88eb267b)
   3. In the first step, chars inside [] like the string map {_PS _TCL} learn_PS -> learn_TCL 
     ![image](https://github.com/user-attachments/assets/c4552114-91dd-427a-bde8-f9d24c9df1a3)
   4. In our file, we will be replacing the space with "_" using the string map
   5. DesignName is the frst valriable set , when given, $DesignName will give out the file name
   6. tcl command [expr {$i+1}] the expr is expression. it will evaluate the values inside the {} brackets.
-  7. Now the i value as passed on the top to the while condition
-  8. 
+  7. Now the "i" value as passed on the top to the while condition
+  8. For DesignName, the output directory will be shown
+  ![image](https://github.com/user-attachments/assets/c611a1a7-d430-4138-9083-c353a699c093)
+  9. Now in the else loop, the variable and the value also is another command to be processed
+  ![image](https://github.com/user-attachments/assets/24bd3c56-6437-4a5b-a8a4-40b960cf6162)
+  10. Now the normalize is another set of sommand to process the absolute value for the directory
+  ![image](https://github.com/user-attachments/assets/417fd2e5-599d-4688-8b61-a9b1997a6175)
+  11. Now this will be saved in the OutPutDirectory as an absolute value
+  ![image](https://github.com/user-attachments/assets/1be11230-8b62-425f-b2ee-7c990188d1ff)
+  12. Now if we increment the "i" value, then the array address is updated and the coressponding value is assigned to it for the rest of the path values from the .csv file
+  ![image](https://github.com/user-attachments/assets/df268191-e967-4cd7-9d64-d6cf75c84145)
+  13. Data will be assigned as below
+  ![image](https://github.com/user-attachments/assets/f3c450cc-6bc3-4f6e-a75d-211672f60bbb)
 
-#### 
+
+
+
+#### Variable Creation DEMO using TCL
+
+
+### Sub-Task Two : From CSV to format[1] and SDC - Processing constraints, CSV
+#### Checking the existence of files and folders mentioned in design_details.csv
+
+#### Convert constraints.csv file to a matrix object
+
+#### Compute row number using complex matrix processing
+
+#### DEMO for computing row numbers
+
 
 
 
