@@ -153,11 +153,21 @@ You can give your email for support required for the user to understand the flow
 
 
 
-#### Variable Creation DEMO using TCL
-
-
 ### Sub-Task Two : From CSV to format[1] and SDC - Processing constraints, CSV
-#### Checking the existence of files and folders mentioned in design_details.csv
+#### Checking the existence of files and folders mentioned in design_details.csv 
+  ![image](https://github.com/user-attachments/assets/c5b1587d-6411-436b-b2c3-ce498237fc62)
+  1. If the conditions fulfil in if, then it will create directory
+  2. Else it will display the output directory path
+     ![image](https://github.com/user-attachments/assets/9822981a-1196-45f4-9b83-667386965038)
+  3. In this the if else has covered conditions for the user, however for the netlist dorectory, that information is mandatory to move forward, so the information will be passed to user to correct and update the required files and the command will exit
+  ![image](https://github.com/user-attachments/assets/aed0eb89-d536-4590-bc60-9be49c7debd2)
+  4. As the above was checking the directory, it was using isdirectory check. Now to check file for the lib files, it needs to check using "exists"
+  ![image](https://github.com/user-attachments/assets/f098babd-780e-4cc5-ae4a-50c5bea42587)
+
+
+
+
+  
 
 #### Convert constraints.csv file to a matrix object
 
