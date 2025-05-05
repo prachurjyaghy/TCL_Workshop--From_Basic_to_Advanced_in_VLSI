@@ -165,8 +165,28 @@ You can give your email for support required for the user to understand the flow
   ![image](https://github.com/user-attachments/assets/f098babd-780e-4cc5-ae4a-50c5bea42587)
   
 #### Convert constraints.csv file to a matrix object
+  ![image](https://github.com/user-attachments/assets/03fa6e85-996e-4be3-87c3-272fd648567a)
+  1. The data can be in bus format, in that case have to go to the netlist and check the data
+  ![image](https://github.com/user-attachments/assets/06f306da-302a-4be6-b45a-a80ea2703045)
+  2. Dumping of SDC constriants and read from the csv file above and create the rows and columns as per the "," characters
+  3. chan is an identifier for the file opening the csv file
+  4. 
 
 #### Compute row number using complex matrix processing
+  1. Inside square commands becomes a tcl command
+  2. contraints is the name of the matrix and the rows and columns for the matrix will be read. The struct::matrix contraints object is the name given to the matrix
+  3. In future, if required, $rows and $columns can be used
+     ![image](https://github.com/user-attachments/assets/064bdad1-64f8-42b7-9509-59e39e275130)
+  4. Process the clock, inputs and outputs separately
+  5. "search all" is from the package and check the character "CLOCKS"
+     ![image](https://github.com/user-attachments/assets/d3c20efd-449a-47ab-9806-7fab3667f857)
+  6. Breakdown of lists that comes in {}
+  7. Check for inputs. Will start with 4
+     ![image](https://github.com/user-attachments/assets/a6ae0351-20d3-4360-9b9a-8477c6325497)
+  8. Similarly for outputs. Will startt with 27
+     ![image](https://github.com/user-attachments/assets/3860b027-da2d-4320-97d0-ed596ce670be)
+     ![image](https://github.com/user-attachments/assets/2a0c0eba-8a7b-4139-b483-985e9bace63f)
+  9. The start point is to be defined in order for the data to be separated and retrieve from the csv file
 
 #### DEMO for computing row numbers
 
