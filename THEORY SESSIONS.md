@@ -188,7 +188,79 @@ You can give your email for support required for the user to understand the flow
      ![image](https://github.com/user-attachments/assets/2a0c0eba-8a7b-4139-b483-985e9bace63f)
   9. The start point is to be defined in order for the data to be separated and retrieve from the csv file
 
-#### DEMO for computing row numbers
+
+## DAY 3: Processing Clock and Input Constraints
+### Sub-Task Two - From CSV to format[1] and SDC - Processing clock constraints
+
+#### Algorithm to identify the column number for clock latency constraints
+![image](https://github.com/user-attachments/assets/e15d3a41-27e4-435c-ad54-53bb1dfc8820)
+  1. Basic algorithm is to find the column number for early_rise_delay and loop it
+     ![image](https://github.com/user-attachments/assets/6b0f1d05-1593-4066-84aa-459ed16b8408)
+  2. While going through the loop, need to fill the values
+  3. Finally display the contents of the cell
+     ![image](https://github.com/user-attachments/assets/12dfff65-5bca-4f57-bd80-688535d671dc)
+  4. Will break the command to small pieces. [] are tcl commands. Search the csv for the respective column for a small area of the file
+     ![image](https://github.com/user-attachments/assets/85efdeb2-edcb-41cd-b9c7-a77c15a23ce7)
+  5. Ex: The expr inside {} is 11 - 1 for evaluation. The search space is restricted, so the starting value with check the rect that it will start from the CLOCK section only and check for columns with only early_rise_delay file
+  6. ![image](https://github.com/user-attachments/assets/7124ed01-e3d6-4f8e-a7c8-d6bd7472efd6)
+  7. Now if we access the 0th index of this list, we wll get the clock_early_rise_delay_start = 3
+  8. Now we can continue to loop through the entirely
+     ![image](https://github.com/user-attachments/assets/12bc99dd-b400-4be7-8161-23c4270f862e)
+
+#### Start writing clock latemcy contraints in SDC file
+  ![image](https://github.com/user-attachments/assets/5acd071e-4f9b-4c54-8253-b7a2a6e73127)
+  1. In the loop, check if the entire clock constraints are read
+     ![image](https://github.com/user-attachments/assets/07cb1282-5fe3-4c8c-8fa6-df3259f70240)
+  2. This line will now create the command for clock latency by getting the values from the constraints file
+  3. The newLine command with -nonewline will print one by one as the loop proceeds
+  4. Now evaluate the values from the matrix and print it for 3,1 matrix location
+     ![image](https://github.com/user-attachments/assets/cc94ee0f-eb77-4cbf-b471-81314f006824)
+  5. To differ between the tcl [] and this command is using "\"
+     ![image](https://github.com/user-attachments/assets/3214ab31-d466-4b78-a548-5e0d1515173a)
+     ![image](https://github.com/user-attachments/assets/2764bbe8-619d-4e48-b5e3-6906771b50ee)
+
+#### Complete clock latency constraints and clock slew constraints in SDC file
+  1. Now complete the early_fall_delay. Update the rect value
+     ![image](https://github.com/user-attachments/assets/9e9dad91-6920-4ca9-b108-9e5455ae3f95)
+  2. Add the remaining lines by changing the contraint value
+     ![image](https://github.com/user-attachments/assets/5bd16eb9-5323-4d08-8f5b-4d3fdcf51b8f)
+  3. The slew values can also be updated for keyword update
+     ![image](https://github.com/user-attachments/assets/e9d1dbc8-f838-42a6-92c7-5acea6db26fd)
+     ![image](https://github.com/user-attachments/assets/debd3040-ac78-431a-9d42-8810ff45dc6c)
+  4. For slew, clock_transtion wil be required for the command to be used
+     ![image](https://github.com/user-attachments/assets/293e1c08-a497-4079-a4aa-3115c042ba40)
+
+
+#### Code to create clock constraints with clock period and duty cycle
+![image](https://github.com/user-attachments/assets/24c83c9d-fda2-4434-9ee4-c3b2d320b974)
+  1. To get the clock name from file, can use this ![image](https://github.com/user-attachments/
+     assets/5780dbe5-d746-440d-8f1f-60b206330e4e) or hardcode the value in the command
+  2. For the waveform have to be formulated as per the duty cycle of the clock period
+     ![image](https://github.com/user-attachments/assets/24212ef8-9afa-43ec-a005-d631a27c7910)
+  3. The expr use from the matrix for the cell values, will give us the waveform. As duty cycle is 50%, the first expression will give 1500 and the second gives 50. The arithmetic calculation will give the value. Once the i is incremented, it will update for the rest
+  ![image](https://github.com/user-attachments/assets/2e2f501c-b8e7-42e6-8c59-a9959ec538dd)
+  4. File open in write mode for sdc, the below command will be consolidated
+    ![image](https://github.com/user-attachments/assets/48be5057-e709-4b4b-b7b3-aa398ef0f0ae)
+
+
+NOTE: for the command to understand the {} as character, "\" is used before
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
