@@ -233,8 +233,7 @@ You can give your email for support required for the user to understand the flow
 
 #### Code to create clock constraints with clock period and duty cycle
 ![image](https://github.com/user-attachments/assets/24c83c9d-fda2-4434-9ee4-c3b2d320b974)
-  1. To get the clock name from file, can use this ![image](https://github.com/user-attachments/
-     assets/5780dbe5-d746-440d-8f1f-60b206330e4e) or hardcode the value in the command
+  1. To get the clock name from file, can use this ![image](https://github.com/user-attachments/assets/5780dbe5-d746-440d-8f1f-60b206330e4e) or hardcode the value in the command
   2. For the waveform have to be formulated as per the duty cycle of the clock period
      ![image](https://github.com/user-attachments/assets/24212ef8-9afa-43ec-a005-d631a27c7910)
   3. The expr use from the matrix for the cell values, will give us the waveform. As duty cycle is 50%, the first expression will give 1500 and the second gives 50. The arithmetic calculation will give the value. Once the i is incremented, it will update for the rest
