@@ -245,6 +245,23 @@ You can give your email for support required for the user to understand the flow
 NOTE: for the command to understand the {} as character, "\" is used before
 
 
+### Sub-Task Two - From CSV to format[1] and SDC - Processing input constraints
+#### Introduction to the task of differentiating between bits and a bus
+Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-52aec8d3e8ab)
+  1. The inputs are mostly bus values, i.e they are mutibit. 
+
+#### Algorithm to categorize input ports as bits and bussed
+
+
+#### File access and pattern creation steps
+
+#### Regular expression and regular substitute to get fixed space strings
+
+#### Read, split, uniquify, sort and join input ports to remove duplication
+
+#### Evaluate the length of the string
+
+#### 
 
 
 
