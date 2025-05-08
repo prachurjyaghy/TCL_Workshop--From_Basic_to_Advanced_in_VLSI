@@ -321,10 +321,25 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 
 ## DAY 4: Complete Scripting and Yosys Synthesis Introduction
 ### Full script for download and Conclusion
-
 #### Constraints generation logic for the output port and Conclusion
+  1. Similar to input constraints
+     ![image](https://github.com/user-attachments/assets/24413375-c05c-4540-93bd-619def6e5182)
+  2. Now need to update the rect for searching the cells in the constraints matrix
+  3. Since now the search area will start from the output cell and end in the final row number. The search rect now will require the number of rows as end point for the data to be read
+  4. The output will only contain delays and load. It does not consists the slew/ transition data. These are standard constraints for the input and output for the SDC format creation
+![image](https://github.com/user-attachments/assets/a6da11e9-2981-46c0-8230-35e7df35275d)
+  5. With this the TCL first part is concluded for the SDC creation as per the standard format
 
 ### Introduction to Yosys synthesis tool usage
+  1. Now will pass the SDC created previously to 'Yosys' tool
+  2. Ex: The memory module creation with CLK, ADDR, DIN, DOUT
+    ![image](https://github.com/user-attachments/assets/75719571-633d-4f6c-a74b-8f4fea7077d1)
+      a. The word sze changes will determine the bit size. Input and output can be updated for the behaviotal code
+      b. This will now create a gate level netlist
+      ![image](https://github.com/user-attachments/assets/710b51c8-f982-4e83-996e-35f29da2eab6)
+      c. Tool has command called "show command" to show the implemented code
+
+      
 #### Example of a memory module RTL description
 
 #### Memory functionality and Synthesis using Yosys
