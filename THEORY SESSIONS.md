@@ -250,10 +250,35 @@ NOTE: for the command to understand the {} as character, "\" is used before
 Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-52aec8d3e8ab)
   1. The inputs are mostly bus values, i.e they are mutibit. 
 
-#### Algorithm to categorize input ports as bits and bussed
+  ![image](https://github.com/user-attachments/assets/1f103a2d-73e3-4fea-99e0-50bffe955b6d)
+   Input spaced by multiple characters
+   String element count
+   ![image](https://github.com/user-attachments/assets/c7fdc1b0-08a0-4f9e-8d32-98c420f02557)
 
+
+
+#### Algorithm to categorize input ports as bits and bussed
+  1. Globing - identifying the wildcards in directories by searching and get all the .v files in the directory. Similar to ls -lrt
+     ![image](https://github.com/user-attachments/assets/769a1b3e-4c65-4d7c-a4e1-da25a041528a)
+  2. tmp file created and is destroyed after use ![image](https://github.com/user-attachments/assets/1d1f4ed0-2e02-45b4-942d-7935a45ad1f4)
+  3. The space separated path in the netlist directory will be assigned to the "f" variable in the foreach loop.
+     NOTE: If no "w" is given the default file will be opened in read mode
+  4. The while loop will read every line till the end of line. (-1) refers to end of line ![image](https://github.com/user-attachments/assets/1971589a-2360-40c1-8d74-0c36a11674bb)
+  5. "" is used for pattern creation. As .v file has an extension of ";" , so adding it in the pattern ![image](https://github.com/user-attachments/assets/0b390513-79a1-4fb6-a0b0-b861cdc6f3e6)
 
 #### File access and pattern creation steps
+  1. regexp is regular expression trying to find the pattern in each line from the netlist that it is reading from
+  2. If the pattern is not found in one file, it will move ahead to the next file
+     ![image](https://github.com/user-attachments/assets/d768bcd8-17f2-486e-a504-2affa8de91c3)
+  3. The "\S+" to get multiple spaces and get the elements around the spaces in the pattern2
+  4. The new string pattern will be created and get inside the loop
+     ![image](https://github.com/user-attachments/assets/9f7d498e-c72f-42b5-b5fc-fa8c04b0536f)
+  5. The count is < 2, so no * is added at the end
+  6. Now added this to the temp file without the multiple spaces for easier evaluation
+  7. regsub having multiple spaces will now evaluate and put it in the temp file with a new string name ![image](https://github.com/user-attachments/assets/30e3ea6a-a256-4dbf-ae66-83e5774037da)
+  8. Close the netlist and the temp file and the temp file should have the data
+     ![image](https://github.com/user-attachments/assets/9ebb2535-a663-4497-85be-8f94bac82fc0)
+     -> Need to sort this repeated values
 
 #### Regular expression and regular substitute to get fixed space strings
 
@@ -261,7 +286,7 @@ Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-
 
 #### Evaluate the length of the string
 
-#### 
+#### r
 
 
 
