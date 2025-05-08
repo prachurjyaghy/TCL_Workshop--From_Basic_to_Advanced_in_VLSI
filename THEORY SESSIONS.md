@@ -281,12 +281,74 @@ Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-
      -> Need to sort this repeated values
 
 #### Regular expression and regular substitute to get fixed space strings
+Check the data LAB part on how the regexp help to remove the extra spaces between them
 
 #### Read, split, uniquify, sort and join input ports to remove duplication
+  1. The created tmp file will be read which contains the output data from all the verilog  files. Since $i is till 5, only the cou_en will be displayed and dumped.
+  2. Now open another tmp2 file in write mode
+     ![image](https://github.com/user-attachments/assets/1eda392e-51e6-4b5c-841e-f61b66e95161)
+  3. Now for data to be dumped in tmp2 file:
+      a. Read  contents of tmp1 and split them with "\n" as delimiter as the data is pronted   in newlines.
+     ![image](https://github.com/user-attachments/assets/8d75f220-6c16-4dca-9525-23d97260643f)
+      b. Since \n was dumped in the tmp1 as the 1st element, the output will have {} as the start. ![image](https://github.com/user-attachments/assets/1ca8ce4d-51f5-46a5-a5cd-d1aa3eee0911)
+      c. Uniquify the element in the same list and sort it. ![image](https://github.com/user-attachments/assets/df52c448-b6f0-4a1d-9f21-39eaeffe4e99)
+      d. Now join them as "\n" delimiter. ![image](https://github.com/user-attachments/assets/8a311861-a347-4c6d-b326-80616418db33)
+      e. There will be no duplication and unique data will be saved in tmp2 file
+      f. Now if the $i is > 5, the multi bit data will be taken.
+         i. NOw there will be more elements in the data that is finally dumped in tmp2
+          ![image](https://github.com/user-attachments/assets/92cb182f-d063-4499-87e4-fb14a6bd615a)
+      g. Close the tmp and tmp2 files ![image](https://github.com/user-attachments/assets/e5bf3fb6-afd5-49e3-93b1-7d12b09e254e)
+
 
 #### Evaluate the length of the string
+  1. Open the tmp2 file in read mode which was closed after the unique daat was dumped
+     ![image](https://github.com/user-attachments/assets/099d2579-3609-4b19-9fe1-daf0e2994f43)
+  2. The cound with get the lngth of the lines in tmp2
+  3. Concat the data if > 2 , i.e. Multibit data
+     ![image](https://github.com/user-attachments/assets/353cf962-23b4-46a8-aa9f-f79d3e8e3438)
+   
+   NOTE: TCL can read the file only once. So commented out after use.
 
-#### r
+   4. Step by step the process can be shown and be visible in LAB sections. Be it reading, sorting, uniquifying and joining the data.
+   5. This will show the content of the tmp2 file.
+   6. NOw concat the multibit data by putting * at the end
+
+
+#### Input constraints generation
+![image](https://github.com/user-attachments/assets/a4212cbc-69ed-43f0-89d3-4bdb9d88e434)
+  1. 
+
+
+## DAY 4: Complete Scripting and Yosys Synthesis Introduction
+### Full script for download and Conclusion
+
+#### Constraints generation logic for the output port and Conclusion
+
+### Introduction to Yosys synthesis tool usage
+#### Example of a memory module RTL description
+
+#### Memory functionality and Synthesis using Yosys
+
+#### Components and Gate level netlist description of Synthesiszed memory
+
+#### Memory Write operation discussed in detail
+
+#### Memory Read operation and TCL scripting agenda
+
+
+### Hierarchy check and error handling script creation for Yosys
+#### Script to do a hierarchy check
+
+#### Demo for the above
+
+#### Demo for error handlung concept in hierarchy check
+
+#### Error handling script for hierarchy check
+
+#### Demo for error handling script
+
+
+
 
 
 
