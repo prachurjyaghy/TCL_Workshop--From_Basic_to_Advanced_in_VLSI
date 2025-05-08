@@ -331,6 +331,7 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
   5. With this the TCL first part is concluded for the SDC creation as per the standard format
 
 ### Introduction to Yosys synthesis tool usage
+#### Example of a memory module RTL description  
   1. Now will pass the SDC created previously to 'Yosys' tool
   2. Ex: The memory module creation with CLK, ADDR, DIN, DOUT
     ![image](https://github.com/user-attachments/assets/75719571-633d-4f6c-a74b-8f4fea7077d1)
@@ -338,11 +339,25 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
       b. This will now create a gate level netlist
       ![image](https://github.com/user-attachments/assets/710b51c8-f982-4e83-996e-35f29da2eab6)
       c. Tool has command called "show command" to show the implemented code
+      d. The module will look like this. If WordSize is 1, then it can store 1 bit data in 0 and 1. ![image](https://github.com/user-attachments/assets/a465b720-a5f4-42e2-931a-51f2c14d77f6)
+      e. Convert the binary to decimal to resolve the address size of memory
+      ![image](https://github.com/user-attachments/assets/dec4a744-a544-4951-ba14-f5b5ae88cc43)
+      f. Clock input port parameters are based on the edge change of the clock period
 
-      
-#### Example of a memory module RTL description
-
+     
 #### Memory functionality and Synthesis using Yosys
+  1. Process memory for the posedge of the clock. mem[ADDR] wll direct to the address of the memory
+     ![image](https://github.com/user-attachments/assets/3688694d-bc58-494a-b7b2-5dd0bf790528)
+  2. For the second clock edge, it is same and DIN data will be updated. So for DOUT <= mem[ADDR] is din value as it is assigned
+  3. For addr[0] & [1], the functionality changes. DIN will go and sit in the memory
+
+  4. Add the memory verilog code in memory.v
+  5. Create a yosys file for the behavioural process for Yosys
+     ![image](https://github.com/user-attachments/assets/b0623fe2-c83d-4515-8dc5-749a4fdfecf0)
+
+  6. RTL Gate level Synthesis will be visible at the last for the memory module
+     ![image](https://github.com/user-attachments/assets/d42d4ad7-e010-4b43-8923-5f8e7aedf6d5)
+
 
 #### Components and Gate level netlist description of Synthesiszed memory
 
