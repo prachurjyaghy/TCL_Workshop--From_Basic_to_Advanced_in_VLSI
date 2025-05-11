@@ -206,5 +206,8 @@ file:///home/vsduser/Pictures/Screenshot%20from%202025-05-11%2014-24-59.png
 
 
 
-
 ### Process bussed ports and configuration file creation
+
+
+### Quality of results (QoR)
+
