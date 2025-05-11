@@ -1,6 +1,10 @@
 # LAB SESSIONS 
 
 ## DAY 1: Introduction to TCL and VSDSYNTH Toolbox Usage
+![image](https://github.com/user-attachments/assets/80761b32-5178-4785-91c4-08c6c68a2a54)
+
+![image](https://github.com/user-attachments/assets/09ff035e-48c1-4131-b3f5-22e85eb83238)
+![image](https://github.com/user-attachments/assets/5245d11f-4f9a-4fe2-a650-3a1ec08ea28a)
 
 
 ## DAY 2: Variable Creation and Processing Contraints from CSV using TCL
