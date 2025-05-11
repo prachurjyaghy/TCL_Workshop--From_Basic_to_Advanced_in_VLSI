@@ -489,6 +489,49 @@ Ex: for arg = 8
 #### Script to expand bussed input ports for arrival time constraints
 
 
+#### Script to convert all bussed constraints to bit-blasted
+![image](https://github.com/user-attachments/assets/392cb5e4-3b14-4c30-9c16-8bec1a9ebce5)
+  1. The load also needs to be added for bit-blasted data
+  2. Output will be visible like this:
+     ![image](https://github.com/user-attachments/assets/0ff91aa0-679b-4593-9690-f8965d1a4640)
+
+
+#### Opentimer configuration file creation
+  1. This format is required by Opentimer tool to execute the timing reports
+     ![image](https://github.com/user-attachments/assets/ef96a6ea-ba6b-42fd-bf4f-ee228af7de9f)
+  2. The .conf file will be input to the tool to generate STA data
+  3. Will be creating spefs for sampling to the tool
+     ![image](https://github.com/user-attachments/assets/f4ff7436-4eed-4417-93be-67ae80b40b00)
+       a. This will create a blank SPEF using the data
+       b. Then will append in the .conf file. Using appnd mode, it will add new data in the existing file
+       c. Add the new commands for analysis for the deisgn
+       d. Parasitics will give output like this:
+       ![image](https://github.com/user-attachments/assets/dfd71e78-005a-4255-8947-017a1030d62a)
+       e. The further commands appends are added at the last
+       ![image](https://github.com/user-attachments/assets/a1eb73f1-698c-4803-9744-4842a605c228)
+
+
+### Quality of results (QoR) generation algorithm
+#### Script to obtain STA runtime
+  1. As per EDA vendors, there are different formats
+     ![image](https://github.com/user-attachments/assets/5b355a51-243e-4587-b1ec-89241c073809)
+  2. For runtime extraction for opentimer tool. Same can be done for entier flow as well. It depends on the CPU , memory availablity
+  3. 'time" is a tcl command to check the time in micro-seconds (us)
+  4. Now need to convert it to preferred format
+     ![image](https://github.com/user-attachments/assets/962aca2f-5989-4ba4-9181-3472cd6928cc)
+  5. Print the puts command for information to the user to understand
+  6. Since we are redirecting the whole opentimer command to the .results area, we are displaying for the user to check for warnings and errors in the file
+     ![image](https://github.com/user-attachments/assets/7ea9e5f9-b71a-4f52-a25f-47a87c76a5a6)
+
+#### 
+
+
+
+
+     
+
+
+
 
      
 
