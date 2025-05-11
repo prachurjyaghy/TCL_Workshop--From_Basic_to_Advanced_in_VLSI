@@ -106,6 +106,28 @@
 
 ### TCL PART ONE Completion with full script
 
+### YOSYS TOOL INTRO
+#### Memory creation
+![image](https://github.com/user-attachments/assets/f1c2bc96-c5a4-474b-a34f-d08d8bc53f6f)
+
+![image](https://github.com/user-attachments/assets/32c9303d-2f0a-41fd-9cfe-015f4f93a87b)
+
+![image](https://github.com/user-attachments/assets/ea108dc5-393f-4642-94d5-eca1dfaa873c)
+
+#### Execution in Yoysys and output
+![image](https://github.com/user-attachments/assets/ff3cc14d-e19c-4cf7-9c5c-72e8115723a1)
+
+![image](https://github.com/user-attachments/assets/8fc35c00-1128-4603-aac7-78a25f693758)
+
+![image](https://github.com/user-attachments/assets/9a0a19ed-a7ac-4a59-b0fd-099566a97cb1)
+
+![image](https://github.com/user-attachments/assets/324cc6dc-e568-48c9-bcab-54843437d0b3)
+
+![image](https://github.com/user-attachments/assets/1185f3be-b4c8-4769-bf35-d10b543a1798)
+
+![image](https://github.com/user-attachments/assets/6a2896af-9dff-48c0-bd6f-fd15d9f6c86b)
+
+
 ## DAY 5: Advanced Scripting Techniques and Quality of Results Generation
 
 ### Interpret input, transition and output delay constraint and creation
