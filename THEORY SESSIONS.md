@@ -414,6 +414,101 @@ Ex: for arg = 8
   8. As the value null has no options/ switch for the usage, it comes out of the loop
 
 #### read_lib and read_verilog proc demo
+  ![image](https://github.com/user-attachments/assets/03799bae-7b29-4df9-ba38-10bfbac93066)
+
+#### Read SDC file and replace square brackets by 'null'
+  ![image](https://github.com/user-attachments/assets/1e18cc6d-4ced-4b2f-9518-9b2f24e6ac70)
+
+
+#### Evaluate clock period and clock port name from processed SDC
+  ![image](https://github.com/user-attachments/assets/065b04e3-e289-48e9-8362-801a4bbd3863)
+
+  1. Converting create_clock constraints
+  ![image](https://github.com/user-attachments/assets/f1f55136-fc4d-484e-b8c2-585fe82d7d01)
+  2. Elements mapped to index
+     ![image](https://github.com/user-attachments/assets/83bfaff5-6145-49c8-82b7-9da7770e2bc7)
+     ![image](https://github.com/user-attachments/assets/adb156ac-7454-4a85-a330-ba8853ff3cfe)
+  3. Waveform calculation
+     ![image](https://github.com/user-attachments/assets/d8e93323-5cc6-48eb-b913-635946a1c7d1)
+
+
+#### Evaluate duty cycle and create clock in opentimer format
+
+  1. Clock period and calculate using the duty cycle calculation
+     ![image](https://github.com/user-attachments/assets/261cd027-4059-4627-bede-6b53f3262ba8)
+  2. The expression will use the waveform creation for the selected ports
+     ![image](https://github.com/user-attachments/assets/b4be2ddb-4e9f-470f-8087-4a3775351c0f)
+     ![image](https://github.com/user-attachments/assets/5cc12554-9703-4afd-959d-40ad78bc9420)
+  3. This will be able to be used in the openTimer tool
+  4. The space separated line is put into a list
+  5. Since there are 2 clocks, the create_clock is created like this:
+     ![image](https://github.com/user-attachments/assets/fd5e88fe-d2a8-4c29-bf95-2285b42e8488)
+  6. This format will be used by the tool
+     ![image](https://github.com/user-attachments/assets/0ec9bd5a-15a3-431e-bd33-f969d1b307b0)
+
+
+### read_sdc proc - interpret IO delays and transition constraints
+#### Grep clock latency and port name from SDC file
+  1. Similar to create clock constraints, create the file for opentimer
+     ![image](https://github.com/user-attachments/assets/42336675-e2d9-429e-909a-8f36d07c9c26)
+  2. Intermediate file to be used ![image](https://github.com/user-attachments/assets/9f4eb092-a4a8-4c14-9a5c-88bf3490db13)
+  3. Dummy port name to reduce the repeated lines to reduce runtime
+  4. Go through each and every element of the lines
+    ![image](https://github.com/user-attachments/assets/897466d6-e180-4df7-8bfe-30728800df4c)
+  5. Check the port name from the list, if it does not match, the loop will continue. This sets dummy port name to current port name. Append them in single line using join
+     ![image](https://github.com/user-attachments/assets/51418c41-20d4-4d10-b296-e6768c1a99dd)
+     
+
+#### Convert set_clock_latency SDC to opentimer format
+  1. Need to get the list for the delay
+     ![image](https://github.com/user-attachments/assets/d0d4248d-1f19-4d56-849a-07c4eb90feda)
+  2. Move through each element as per the {} characters which is 4. Now need to loop through each and every one
+  3. Delay value will be taken as per the get_clocks, by which we can navigate it using the index. Append the value from the list
+     ![image](https://github.com/user-attachments/assets/9085a8ac-d5b2-4f44-8ec0-4ed954832a14)
+  4. Repeat this for all the elements in the loop
+  5. Arrange the values ![image](https://github.com/user-attachments/assets/6a51a407-e26e-40a1-a2ac-79fde7581bc1)
+  6. For the second clock, the new port name and the current name is same
+     ![image](https://github.com/user-attachments/assets/8661f6e0-e989-4e5c-8b78-790e59e85a57)
+  7. So it will not enter into the loop as the value will be same and give a null value
+  8. Close the tmp file
+
+
+#### Script for convert transtion and input delay to opentimer format
+![image](https://github.com/user-attachments/assets/d2ffd8f1-d080-42a5-8d92-339e03f42245)
+  1. Similar to the previous ones, only it has updated the slew from arrival to set_input_transition
+
+#### Script for convert output delay to opentimer format
+![image](https://github.com/user-attachments/assets/24d063b9-39be-419e-89b6-7c4ba2038305)
+  1. Model the load for the output capacitance
+  2. It is a single value that needs to be set
+     ![image](https://github.com/user-attachments/assets/de82fac0-328a-4954-87dd-a3f37ef1b90d)
+  3. Only the search pattern changes, others remain the same
+     ![image](https://github.com/user-attachments/assets/1abe5c3d-3d0d-4c32-bf31-5b6c46a9ca74)
+
+### Process bussed ports and configuration file creation
+#### Script to expand bussed input ports for arrival time constraints
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
