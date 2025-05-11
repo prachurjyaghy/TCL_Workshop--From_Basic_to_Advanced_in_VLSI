@@ -191,7 +191,9 @@
 #### Synthesis script editing for Yosys
 ![image](https://github.com/user-attachments/assets/8aeeebf1-5960-4615-aeb3-0fade1faf11b)
 
+#### PROCS
 
+file:///home/vsduser/Pictures/Screenshot%20from%202025-05-11%2014-24-59.png
 
 ### Interpret input, transition and output delay constraint and creation
 ![image](https://github.com/user-attachments/assets/421bb310-55a2-4a20-8602-7642c5773bd2)
