@@ -17,5 +17,8 @@
 ## DAY 4: Complete Scripting and Yosys Synthesis Introduction
 
 ## DAY 5: Advanced Scripting Techniques and Quality of Results Generation
-### Process bussed ports and configuration file creation
+
+### Interpret input, transition and output delay constraint and creation
 ![image](https://github.com/user-attachments/assets/421bb310-55a2-4a20-8602-7642c5773bd2)
+
+### Process bussed ports and configuration file creation
