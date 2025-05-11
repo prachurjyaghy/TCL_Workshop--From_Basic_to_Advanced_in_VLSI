@@ -248,7 +248,10 @@ NOTE: for the command to understand the {} as character, "\" is used before
 ### Sub-Task Two - From CSV to format[1] and SDC - Processing input constraints
 #### Introduction to the task of differentiating between bits and a bus
 Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-52aec8d3e8ab)
-  1. The inputs are mostly bus values, i.e they are mutibit. 
+  1. The inputs are mostly bus values, i.e they are mutibit.
+  2. Need to identify these multibits data for EDA tool to process
+  3. In n-bit bus, '*' is added so that this will be taken for all the bits
+  4. This will open the verilog file and take the data from top level
 
   ![image](https://github.com/user-attachments/assets/1f103a2d-73e3-4fea-99e0-50bffe955b6d)
    Input spaced by multiple characters
@@ -360,7 +363,11 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 
 
 #### Components and Gate level netlist description of Synthesiszed memory
-
+  1. Real Gates to be fed with right inputs
+       a. set ADDR[0] to access data in the address
+       b. In each mem[], X is put (undefined)
+  2. INV, NAND, OAI(OR,AND,INV), NOR - truth table is used
+  3. Diamond shaped representation of mem refers to a bus
 #### Memory Write operation discussed in detail
 
 #### Memory Read operation and TCL scripting agenda
@@ -369,14 +376,7 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 ### Hierarchy check and error handling script creation for Yosys
 #### Script to do a hierarchy check
 
-#### Demo for the above
-
-#### Demo for error handlung concept in hierarchy check
-
 #### Error handling script for hierarchy check
-
-#### Demo for error handling script
-
 
 
 ## DAY 5:
