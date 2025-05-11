@@ -22,7 +22,12 @@
         2. World of 'Procs'
         3. Interpret clock generation constraints
         4. Interpret IO delays and transition constraints
+        5. Process bussed ports and configuration file creation for Opentimer
+        6. Quality of results (QoR) generation algorithm
 
 ## WORKSHOP SESSIONS ARE RECORED IN THE BELOW THORY AND PRACTICAL SESSIONS
-  --> 
+  
+  --> [THEORY SESSIONS](THEORY_SESSIONS.md)
+
+  --> [LAB SESSIONS](LAB_SESSIONS.md)
         
