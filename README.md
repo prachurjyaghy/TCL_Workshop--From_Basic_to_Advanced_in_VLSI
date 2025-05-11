@@ -29,5 +29,5 @@
   
   --> [THEORY SESSIONS]
 
-  --> [LAB SESSIONS](LAB SESSIONS.md)
+  --> [LAB SESSIONS](https://github.com/prachurjyaghy/TCL_Workshop--From_Basic_to_Advanced_in_VLSI/blob/d3d754725632f34b5cb7cd73e00f983182c1dc38/LAB%20SESSIONS.md)
         
