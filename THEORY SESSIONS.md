@@ -379,7 +379,49 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 
 
 
+## DAY 5:
+### Synthesis main file scripting and output file editing
+### Need and script to edit Yosys output netlist
 
+
+### World of 'Procs'
+#### Redirect stdout proc and demo of TCL array command
+  ![image](https://github.com/user-attachments/assets/063bb882-284c-4035-8ed7-83edbd7634d9)
+  1. Close the std screen log and open new file in write mode. Any new puts statement added will be dumped in this file
+  2. For multicpu threading: ![image](https://github.com/user-attachments/assets/576e77b3-e6c4-47cf-8052-cfc32b63e9ec) . Used for distribution in EDA tools
+     ![image](https://github.com/user-attachments/assets/36d35d74-3917-401c-aeb0-a191e949e0a4)
+     a. Using the args and values of the args, the same will be activated with options for user. It can include details for the user to correct and execute the proc
+     b. array set option work as variable and its corresponding value ![image](https://github.com/user-attachments/assets/2506ba4f-dc60-4880-99f4-89f5ea3ced83)
+     c. "-help" is "null"
+     d. As per this:
+     ![image](https://github.com/user-attachments/assets/6a66beb6-351f-4b56-81a8-1c622113f9bb)
+       i. Will be able to map to args and give the options
+       ![image](https://github.com/user-attachments/assets/9145928f-6c0f-4757-a0f3-a6ccf7c2c348)
+
+
+#### 'set_multi_cpu_usage' proc
+Ex: for arg = 8
+  1. ![image](https://github.com/user-attachments/assets/c7c37efe-4795-44ea-aa1a-76ede7c313b4)
+  2. The arg value will be mapped for the value provided in the arg
+  3. The switch is the options that the user wants to provide for use
+  4. "-glob" will try to take the 0th element from the array
+     ![image](https://github.com/user-attachments/assets/707ea9bb-dac8-49ae-b25e-7ed878e4428d)
+     ![image](https://github.com/user-attachments/assets/aee5f38a-440d-4b6d-b8df-2f511e1a57e8)
+  5. Now when both the option is used, the llength 3 is updated
+     ![image](https://github.com/user-attachments/assets/6f87d322-7b94-4faf-bb40-ad84b48264b1)
+  6. Options is an array and the variables and the value for the array as string is the options that we are providing
+  7. Need to convert this proc to be understood by EDA tools
+  8. As the value null has no options/ switch for the usage, it comes out of the loop
+
+#### read_lib and read_verilog proc demo
+
+
+
+
+
+
+
+  
 
 
 
