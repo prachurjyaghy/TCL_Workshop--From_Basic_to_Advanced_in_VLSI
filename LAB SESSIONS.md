@@ -17,3 +17,4 @@
 ## DAY 4: Complete Scripting and Yosys Synthesis Introduction
 
 ## DAY 5: Advanced Scripting Techniques and Quality of Results Generation
+### Process bussed ports and configuration file creation
