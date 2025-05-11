@@ -18,3 +18,4 @@
 
 ## DAY 5: Advanced Scripting Techniques and Quality of Results Generation
 ### Process bussed ports and configuration file creation
+![image](https://github.com/user-attachments/assets/421bb310-55a2-4a20-8602-7642c5773bd2)
