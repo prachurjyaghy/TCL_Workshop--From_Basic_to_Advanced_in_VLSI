@@ -523,7 +523,45 @@ Ex: for arg = 8
   6. Since we are redirecting the whole opentimer command to the .results area, we are displaying for the user to check for warnings and errors in the file
      ![image](https://github.com/user-attachments/assets/7ea9e5f9-b71a-4f52-a25f-47a87c76a5a6)
 
-#### 
+#### Script to obtain WNS and FEP for reg2out violations
+  1. Results that will be displayed for the STA
+     ![image](https://github.com/user-attachments/assets/c27c2e8c-9aca-49c6-8d50-4d919de29052)
+
+  2. RAT will display the slack data. SO this keyword in the results file will have all the slack data. So to calculate, the worst RAT / WNS, will be able to check easily
+  ![image](https://github.com/user-attachments/assets/88277481-4080-441a-9e01-0b5725e1018e)
+  3. Need a while loop to check the worst value
+     ![image](https://github.com/user-attachments/assets/6d184ac7-b55d-41e3-b103-29faeb625bc9)
+     a. If there are no violations, need to pront "-"
+     b. Check for the regexp for the RAT in the file that is being read
+     c. Print the RAT in "ns"
+     d. Read the line for RAT, increment the count for the while loop
+     ![image](https://github.com/user-attachments/assets/f72cbf65-2e9b-4e95-a623-05d8c3d5862f)
+
+#### Script for instance count, WNS and FEP for setup and hold
+  1. Same loop can be used by reading the results file as per the pattern
+     Instance count:
+     ![image](https://github.com/user-attachments/assets/61f5f2b7-10f7-4624-8af2-619108eebca1)
+     Setup violations:
+     ![image](https://github.com/user-attachments/assets/3bae3875-6b40-4c18-81a6-e79fe46661f6)
+     Hold Violations:
+     ![image](https://github.com/user-attachments/assets/e9a60708-ed4a-4093-ad99-d4e9160c02cb)
+
+#### Script for report formatting
+  ![image](https://github.com/user-attachments/assets/b727272d-574f-46f8-8eb6-52e276112e8e)
+  1. %15s is a conversion specifier. FOr string, %s is string and 15 is spacing
+  2. Now align the data as list and feed it to the table
+     ![image](https://github.com/user-attachments/assets/15253e4b-d337-4aa3-be84-9f985afa9a23)
+  3. Use the string separator as per the headings
+     ![image](https://github.com/user-attachments/assets/aa5d29a8-0bae-4e1b-b8c3-01cb0a792d0a)
+     ![image](https://github.com/user-attachments/assets/27849bd3-1e94-469e-aa1d-08204c32e6e0)
+
+
+
+
+
+
+
+
 
 
 
