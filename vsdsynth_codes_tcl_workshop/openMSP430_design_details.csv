@@ -1,0 +1,6 @@
+Design Name,openMSP430
+Output Directory,/home/vsduser/vsdsynth/outdir_openMSP430
+Netlist Directory,/home/vsduser/vsdsynth/verilog
+Early Library Path,/home/vsduser/vsdsynth/osu018_stdcells.lib
+Late Library Path,/home/vsduser/vsdsynth/osu018_stdcells.lib
+Constraints File,/home/vsduser/vsdsynth/openMSP430_design_constraints.csv
