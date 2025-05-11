@@ -190,6 +190,7 @@
 
 #### Synthesis script editing for Yosys
 ![image](https://github.com/user-attachments/assets/8aeeebf1-5960-4615-aeb3-0fade1faf11b)
+![Screenshot from 2025-05-11 13-59-09](https://github.com/user-attachments/assets/822ccce5-70c7-4bc8-8f9c-ff4d89257867)
 
 #### PROCS
 
