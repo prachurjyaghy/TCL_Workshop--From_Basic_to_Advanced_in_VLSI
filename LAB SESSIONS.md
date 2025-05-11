@@ -16,9 +16,19 @@
 
 ![image](https://github.com/user-attachments/assets/6ac708aa-066a-48ac-ade5-ab4728a705be)
 
-![image](https://github.com/user-attachments/assets/9935d6b5-84cf-48d4-b03c-64536772738f)
+![image](https://github.com/user-attachments/assets/19299c27-1f0e-40bc-8a7e-d8140a5cdabc)
+
+![image](https://github.com/user-attachments/assets/b17e682a-6f45-4f86-a7e1-c1d109050714)
+
+![image](https://github.com/user-attachments/assets/1ad95993-12a4-4e0a-a136-1bb980e04939)
 
 ## DAY 2: Variable Creation and Processing Contraints from CSV using TCL
+
+![image](https://github.com/user-attachments/assets/9935d6b5-84cf-48d4-b03c-64536772738f)
+![image](https://github.com/user-attachments/assets/7862773e-5d81-40df-94e5-5e88e51013a5)
+![image](https://github.com/user-attachments/assets/e55da2bf-86c1-423b-86da-8a270fba3d6f)
+
+
 ### DEMO for computing row numbers
 
 
