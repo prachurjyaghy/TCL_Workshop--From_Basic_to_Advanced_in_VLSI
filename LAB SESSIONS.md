@@ -43,6 +43,7 @@
 
 
 ## DAY 3: Processing Clock and Input Constraints
+
 ### Creating complete clock constraints
 ![image](https://github.com/user-attachments/assets/e9ece8e2-d968-43b6-ba67-54b5f36131aa)
 
@@ -107,6 +108,7 @@
 ### TCL PART ONE Completion with full script
 
 ### YOSYS TOOL INTRO
+
 #### Memory creation
 ![image](https://github.com/user-attachments/assets/f1c2bc96-c5a4-474b-a34f-d08d8bc53f6f)
 
@@ -283,12 +285,9 @@
 
 
 
-
-
-
-
 ### Quality of results (QoR)
-#### RunTime
+
+### RunTime
 ![Screenshot from 2025-05-12 00-59-55](https://github.com/user-attachments/assets/37e87b85-9bab-4e6f-b097-74dd0e811ebb)
 
 #### Violation data for setup, hold, FEPs and Instance count
@@ -309,7 +308,3 @@
 ![Screenshot from 2025-05-12 03-23-05](https://github.com/user-attachments/assets/2f84b813-68ce-4dd7-8897-c1304c6e9568)
 
 ![Screenshot from 2025-05-12 03-20-27](https://github.com/user-attachments/assets/d188c03e-a7bf-4e42-93a8-6e0a9d0db72f)
-
-
-
-
