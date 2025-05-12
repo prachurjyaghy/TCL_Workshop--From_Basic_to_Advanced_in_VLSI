@@ -25,9 +25,9 @@
         5. Process bussed ports and configuration file creation for Opentimer
         6. Quality of results (QoR) generation algorithm
 
-## WORKSHOP SESSIONS ARE RECORED IN THE BELOW THORY AND PRACTICAL SESSIONS
+## WORKSHOP SESSIONS ARE RECORED IN THE BELOW THEORY AND PRACTICAL SESSIONS
   
-  --> [THEORY SESSIONS](THEORY SESSIONS.md)
+  --> [LAB SESSIONS](https://github.com/prachurjyaghy/TCL_Workshop--From_Basic_to_Advanced_in_VLSI/blob/92e7ffbab09d0f41708c5fe5d602f40404adf337/LAB%20SESSIONS.md)
 
-  --> [LAB SESSIONS](LAB SESSIONS.md)
+  --> [THEORY SESSIONS](https://github.com/prachurjyaghy/TCL_Workshop--From_Basic_to_Advanced_in_VLSI/blob/ad7bd34e7ba5bf6005df139d53706318fd3b8288/THEORY%20SESSIONS.md)
         
