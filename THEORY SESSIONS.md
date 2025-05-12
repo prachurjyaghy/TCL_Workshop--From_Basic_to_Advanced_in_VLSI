@@ -21,54 +21,66 @@ The final will be the synthesized netlist and the timing reports will be shown.
 ### SUB TASK and tool needed
 TOP DOWN approach
  1. Crrate cmd csdsynth and pass .csv from unix shell to TCL script
+ 
  ![image](https://github.com/user-attachments/assets/12bd4d4c-c551-49a0-8158-c2621fab58d9)
+ 
  This will be a command that will be passing the csv file
+ 
  ![image](https://github.com/user-attachments/assets/3ce78454-23d5-47e7-a294-7d10741ca5e4)
 
  2. COnvert all the inputs to format[1] and SDC format and pass to synthesis tool Yosys
-   ![image](https://github.com/user-attachments/assets/635b8582-ac60-43d8-93f3-302b2e452428)
+
+![image](https://github.com/user-attachments/assets/635b8582-ac60-43d8-93f3-302b2e452428)
 This will be fed to Yosys for processing the above inputs
+
 ![image](https://github.com/user-attachments/assets/8729852e-d9d8-416c-a7b9-6dc608ff8844)
     2a. This consist of table for the constraints needs to be converted to SDC(output) as below
+
 ![image](https://github.com/user-attachments/assets/919c7eff-347d-40df-8ee5-2b67c8c55278)
 
-3. Convert format[1] and SDC to format[2] and pass to timing tool 'Opentimer' (used to create th data sheet, only accepts data in certain format for processing in fromat[2]
+4. Convert format[1] and SDC to format[2] and pass to timing tool 'Opentimer' (used to create th data sheet, only accepts data in certain format for processing in fromat[2]
     Below commands is used
+
    ![image](https://github.com/user-attachments/assets/263078fc-35b0-48ab-bb46-6866bf1856be)
    -> lib paths
    -> verilog path
    -> timing - constraints processed from the csv
-   -> ![image](https://github.com/user-attachments/assets/8e040a23-6f7b-4835-8a63-49ac5f6fc0f8)
+   ->
+   ![image](https://github.com/user-attachments/assets/8e040a23-6f7b-4835-8a63-49ac5f6fc0f8)
    The timing contraints in a processable format
    7-bit bus fragmented and identified from the RTL netlist and the inputs from the excel sheet
-4. Generate output report:
+6. Generate output report: 
    ![image](https://github.com/user-attachments/assets/cf339a8c-2b9e-4de1-998f-dfc48bc21ad6)
 
 ### VSDDYNTH Toolbox usage scenarios
 #### Scenario 1: User does not provide and input CSV file
  
 ![image](https://github.com/user-attachments/assets/bcf52e60-4461-4b43-8570-1d34c2f98d5d)
-Inform the user that the input file is not procided
+1. Inform the user that the input file is not procided
+
 ![image](https://github.com/user-attachments/assets/bc0fc474-c86b-489a-a5fd-886d695f4dd2)
-The csv file is an arguement and need to use $arg to access the value
+2. The csv file is an arguement and need to use $arg to access the value
 $#argv is the number of arguemnts. If we only let 1 arguemtn to accept , then need to provide the !==1 so it does not let it go forward
+
 ![image](https://github.com/user-attachments/assets/0413c1d7-4d16-4af4-8ff3-c1cb59917906)
-Create the new file as per your design as per the below file with the lines
+3. Create the new file as per your design as per the below file with the lines
 ![image](https://github.com/user-attachments/assets/f375f6e9-d555-4372-9352-3d090ef0b11c)
-gGive executive access - chmod -R 777
+4. gGive executive access - chmod -R 777
 
 #### Scene2 and 3 : .csv file does not exist and "-help" to find out usage
   1.  $argv[1] is given as my.csv
   ![image](https://github.com/user-attachments/assets/6421468f-2fc5-4d86-9381-37684aeaca93)
-The || sign helps to enter the loop to check the arguments provided with the provided csv file
-This will stop the script due to exit 1
-The below is how it will be displayed if the arguements fulfill and echo the comment provided.
+  
+  2. The || sign helps to enter the loop to check the arguments provided with the provided csv file
+  3. This will stop the script due to exit 1
+  4.The below is how it will be displayed if the arguements fulfill and echo the comment provided.
 ![image](https://github.com/user-attachments/assets/e0817c22-b3dd-438e-a439-2ae6a0619122)
 
 #### scene3: -help to find out usage
-For the -help option, it has echo messages provided for the user
+For the -help option, it has echo messages provided for the user 
 ![image](https://github.com/user-attachments/assets/29e2e665-7d9d-4ba5-8d9c-c17946955b9f)
-User provides
+
+User provides 
 ![image](https://github.com/user-attachments/assets/cadd4529-a3b0-4b9a-8441-4f7d38a34c1d)
 
 DEMO:
@@ -158,10 +170,11 @@ You can give your email for support required for the user to understand the flow
   ![image](https://github.com/user-attachments/assets/c5b1587d-6411-436b-b2c3-ce498237fc62)
   1. If the conditions fulfil in if, then it will create directory
   2. Else it will display the output directory path
+
      ![image](https://github.com/user-attachments/assets/9822981a-1196-45f4-9b83-667386965038)
-  3. In this the if else has covered conditions for the user, however for the netlist dorectory, that information is mandatory to move forward, so the information will be passed to user to correct and update the required files and the command will exit
+  4. In this the if else has covered conditions for the user, however for the netlist dorectory, that information is mandatory to move forward, so the information will be passed to user to correct and update the required files and the command will exit
   ![image](https://github.com/user-attachments/assets/aed0eb89-d536-4590-bc60-9be49c7debd2)
-  4. As the above was checking the directory, it was using isdirectory check. Now to check file for the lib files, it needs to check using "exists"
+  5. As the above was checking the directory, it was using isdirectory check. Now to check file for the lib files, it needs to check using "exists"
   ![image](https://github.com/user-attachments/assets/f098babd-780e-4cc5-ae4a-50c5bea42587)
   
 #### Convert constraints.csv file to a matrix object
@@ -248,11 +261,17 @@ NOTE: for the command to understand the {} as character, "\" is used before
 ### Sub-Task Two - From CSV to format[1] and SDC - Processing input constraints
 #### Introduction to the task of differentiating between bits and a bus
 Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-52aec8d3e8ab)
+![image](https://github.com/user-attachments/assets/7a24fb49-3692-4fa4-83e5-5b5e816fade8)
+
   1. The inputs are mostly bus values, i.e they are mutibit.
   2. Need to identify these multibits data for EDA tool to process
   3. In n-bit bus, '*' is added so that this will be taken for all the bits
   4. This will open the verilog file and take the data from top level
 
+  5. Loop to read multibit ports
+  6. Update the search rectangle from INPUT to scan_mode row
+  
+  7. Related clock to be searched for the IO ports that we are trying to find data for 
   ![image](https://github.com/user-attachments/assets/1f103a2d-73e3-4fea-99e0-50bffe955b6d)
    Input spaced by multiple characters
    String element count
@@ -268,6 +287,7 @@ Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-
      NOTE: If no "w" is given the default file will be opened in read mode
   4. The while loop will read every line till the end of line. (-1) refers to end of line ![image](https://github.com/user-attachments/assets/1971589a-2360-40c1-8d74-0c36a11674bb)
   5. "" is used for pattern creation. As .v file has an extension of ";" , so adding it in the pattern ![image](https://github.com/user-attachments/assets/0b390513-79a1-4fb6-a0b0-b861cdc6f3e6)
+![image](https://github.com/user-attachments/assets/07c1cb20-b581-4328-b049-cb9303e7119f)
 
 #### File access and pattern creation steps
   1. regexp is regular expression trying to find the pattern in each line from the netlist that it is reading from
@@ -319,7 +339,10 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 
 #### Input constraints generation
 ![image](https://github.com/user-attachments/assets/a4212cbc-69ed-43f0-89d3-4bdb9d88e434)
-  1. 
+![image](https://github.com/user-attachments/assets/cad5098a-8454-4515-ad8a-0ee9847bf6d2)
+![image](https://github.com/user-attachments/assets/7739f434-7dd5-4823-87e4-731b1aa6413b)
+![image](https://github.com/user-attachments/assets/673e4e38-a63e-4e14-ada5-e0ab55a4d28f)
+
 
 
 ## DAY 4: Complete Scripting and Yosys Synthesis Introduction
@@ -367,23 +390,91 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
        a. set ADDR[0] to access data in the address
        b. In each mem[], X is put (undefined)
   2. INV, NAND, OAI(OR,AND,INV), NOR - truth table is used
-  3. Diamond shaped representation of mem refers to a bus
-#### Memory Write operation discussed in detail
+![image](https://github.com/user-attachments/assets/d4091906-de64-429b-bd13-f4dd60f2f5be)
+  4. Diamond shaped representation of mem refers to a bus
+![image](https://github.com/user-attachments/assets/65876147-f4df-4f63-b281-f76ce1510011) 
 
-#### Memory Read operation and TCL scripting agenda
+#### Memory Write operation discussed in detail
+Final output to the D FF and at the pos edge, data updates / write out and read in
+![image](https://github.com/user-attachments/assets/15ced796-4872-4dd6-bf23-f9a5b7081059) 
+![image](https://github.com/user-attachments/assets/57cdc413-ab6d-4de8-bbb7-9770fb291a7f)
+
+#### Memory Read operation 
+![image](https://github.com/user-attachments/assets/cb04eee8-6495-4d24-b9ae-3c01802ce93a)
+  1. Now will check for the 2nd clk edge
+       a. INV -> DIN_bar
+       b. NAND -> 1
+  2. Output will have the Inputs for OAI
+  3. For A | C = 0 | 0 as per Truth table
+       a. Output is complmentary of Input -> A_bar
+  4. Now the D->Q mem read scenario from the OAI output data
+  5. Select will determine the read/ write mode of the memory
+  6. At 2nd clock edge, new read data will come and the DOUT will write the DIN of previous clock out
+
+#### TCL scripting agenda
+  1. Automation of RTL in YOSYS tool and to get the gate level netlist
+  2. Hierarchical checks
+  ![image](https://github.com/user-attachments/assets/2a1b97ce-9edd-44b9-9808-c460f8312460)
+  3. Need to make sure that the csv is connected and the output .v is given to YOSYS with aytomation and to give gate level netlist
+  4. .csv --> .v
+
+![image](https://github.com/user-attachments/assets/d9a360d3-9e03-43ff-8b6c-b3b429180fed)
 
 
 ### Hierarchy check and error handling script creation for Yosys
 #### Script to do a hierarchy check
+  1. Output is synthesized netlist required
+  2. Provide Info statement for user to check
+  ![image](https://github.com/user-attachments/assets/4716230c-9f10-4779-b599-95cba571b8db)
+
+  3. CHecks for hierarchy misses in the .v file
+  4. read_liberty -lib
+       a. YOSYS tool commans
+       b. To convert RTL to gate level netlist
+![image](https://github.com/user-attachments/assets/df2538da-80b4-4f15-a53e-88890fd8db99)
 
 #### Error handling script for hierarchy check
+![image](https://github.com/user-attachments/assets/6156d0d0-efeb-4fe1-9f91-bf7411320f7e)
+  1. Referred in module - changes with tool to tool
+       a. YOSYS has referred in module only for error check
+       b. Found in log file
+     ![image](https://github.com/user-attachments/assets/0396a499-ea69-4307-abf6-dfc12c554c3c)
+       c. Update keyword as per the EDA tools
+![image](https://github.com/user-attachments/assets/6f723526-9781-4154-b2e0-902db2e7f72b)
 
 
 ## DAY 5:
+
 ### Synthesis main file scripting and output file editing
+![image](https://github.com/user-attachments/assets/e2f330f3-aafc-4dde-9ab9-0e014e4fdb3f)
+1. Now synth commands are adde for YOSYS tool
+2. Open another fieId in write mode and dump the lines
+3. Command where synthesis command will be running
+     a. In the same .ys file, the new commands will be added
+![image](https://github.com/user-attachments/assets/7f2a5889-67b8-4366-ba77-d0de377570e5)
+
+4. In shell, need to use 'exec', it will run the .ys file
+     a. "catch" is used for error checks. Make the .log to .err file if required
+![image](https://github.com/user-attachments/assets/85c4eb93-fd8a-4266-a63d-b0ccccf8b528)
+
+   NOTE: grep -i error --> -i is case insensitive character check
+
 ### Need and script to edit Yosys output netlist
+  1. SDC to format[2] task
+![image](https://github.com/user-attachments/assets/d4d7eac7-474a-4527-a5e2-e7d91b507bfb)
+  2. YOSYS dumps synthesized netlist
+       a. Has redundent lines in output file
+       b. Remove the lines
+![image](https://github.com/user-attachments/assets/9cf9a627-b396-4d55-ae1c-aa58fc3ae51d)
+
+  3. grep -v -w '*' <filename>
+       a. grep data where '*' character is not there
+  4. grep the "\" and replace it with "" null character
+![image](https://github.com/user-attachments/assets/4c582f33-a2a8-40ff-984f-f1430b37b19e)
+![image](https://github.com/user-attachments/assets/6f435dee-e7cd-485b-bc1a-26976ed2180c)
 
 
+   
 ### World of 'Procs'
 #### Redirect stdout proc and demo of TCL array command
   ![image](https://github.com/user-attachments/assets/063bb882-284c-4035-8ed7-83edbd7634d9)
