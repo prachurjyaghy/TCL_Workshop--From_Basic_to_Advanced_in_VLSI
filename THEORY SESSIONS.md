@@ -1,5 +1,7 @@
 # THEORY
+
 ## DAY 1: Introduction to TCL and VSDSYNTH Toolbox Usage
+
 ### INTRODUCTION
 Agenda is to perform a task
   Build excel sheet as an input and output as a user interface
@@ -53,6 +55,7 @@ This will be fed to Yosys for processing the above inputs
    ![image](https://github.com/user-attachments/assets/cf339a8c-2b9e-4de1-998f-dfc48bc21ad6)
 
 ### VSDDYNTH Toolbox usage scenarios
+
 #### Scenario 1: User does not provide and input CSV file
  
 ![image](https://github.com/user-attachments/assets/bcf52e60-4461-4b43-8570-1d34c2f98d5d)
@@ -90,7 +93,9 @@ You can give your email for support required for the user to understand the flow
 
 
 ## DAY 2 : Variable Creation and Processing Constraints from CSV
+
 ### Sub-Task Two : From CSV to format[1] and SDC - Variable Creation
+
 #### Tasks involved in format conversion
   1. Create Variables for the corresponding inputs provided in the excel sheet
      ![image](https://github.com/user-attachments/assets/2696ae6f-05a9-4cca-b5a8-80344bb2221e)
@@ -166,6 +171,7 @@ You can give your email for support required for the user to understand the flow
 
 
 ### Sub-Task Two : From CSV to format[1] and SDC - Processing constraints, CSV
+
 #### Checking the existence of files and folders mentioned in design_details.csv 
   ![image](https://github.com/user-attachments/assets/c5b1587d-6411-436b-b2c3-ce498237fc62)
   1. If the conditions fulfil in if, then it will create directory
@@ -202,7 +208,9 @@ You can give your email for support required for the user to understand the flow
   9. The start point is to be defined in order for the data to be separated and retrieve from the csv file
 
 
+
 ## DAY 3: Processing Clock and Input Constraints
+
 ### Sub-Task Two - From CSV to format[1] and SDC - Processing clock constraints
 
 #### Algorithm to identify the column number for clock latency constraints
@@ -259,6 +267,7 @@ NOTE: for the command to understand the {} as character, "\" is used before
 
 
 ### Sub-Task Two - From CSV to format[1] and SDC - Processing input constraints
+
 #### Introduction to the task of differentiating between bits and a bus
 Ex: ![image](https://github.com/user-attachments/assets/09917a87-23d7-4165-9662-52aec8d3e8ab)
 ![image](https://github.com/user-attachments/assets/7a24fb49-3692-4fa4-83e5-5b5e816fade8)
@@ -346,7 +355,9 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 
 
 ## DAY 4: Complete Scripting and Yosys Synthesis Introduction
+
 ### Full script for download and Conclusion
+
 #### Constraints generation logic for the output port and Conclusion
   1. Similar to input constraints
      ![image](https://github.com/user-attachments/assets/24413375-c05c-4540-93bd-619def6e5182)
@@ -356,7 +367,9 @@ Check the data LAB part on how the regexp help to remove the extra spaces betwee
 ![image](https://github.com/user-attachments/assets/a6da11e9-2981-46c0-8230-35e7df35275d)
   5. With this the TCL first part is concluded for the SDC creation as per the standard format
 
+
 ### Introduction to Yosys synthesis tool usage
+
 #### Example of a memory module RTL description  
   1. Now will pass the SDC created previously to 'Yosys' tool
   2. Ex: The memory module creation with CLK, ADDR, DIN, DOUT
@@ -422,6 +435,7 @@ Final output to the D FF and at the pos edge, data updates / write out and read 
 
 
 ### Hierarchy check and error handling script creation for Yosys
+
 #### Script to do a hierarchy check
   1. Output is synthesized netlist required
   2. Provide Info statement for user to check
@@ -443,7 +457,7 @@ Final output to the D FF and at the pos edge, data updates / write out and read 
 ![image](https://github.com/user-attachments/assets/6f723526-9781-4154-b2e0-902db2e7f72b)
 
 
-## DAY 5:
+## DAY 5: Advanced scripting techniques and Quality of Results generation
 
 ### Synthesis main file scripting and output file editing
 ![image](https://github.com/user-attachments/assets/e2f330f3-aafc-4dde-9ab9-0e014e4fdb3f)
@@ -476,6 +490,7 @@ Final output to the D FF and at the pos edge, data updates / write out and read 
 
    
 ### World of 'Procs'
+
 #### Redirect stdout proc and demo of TCL array command
   ![image](https://github.com/user-attachments/assets/063bb882-284c-4035-8ed7-83edbd7634d9)
   1. Close the std screen log and open new file in write mode. Any new puts statement added will be dumped in this file
@@ -504,8 +519,10 @@ Ex: for arg = 8
   7. Need to convert this proc to be understood by EDA tools
   8. As the value null has no options/ switch for the usage, it comes out of the loop
 
+
 #### read_lib and read_verilog proc demo
   ![image](https://github.com/user-attachments/assets/03799bae-7b29-4df9-ba38-10bfbac93066)
+
 
 #### Read SDC file and replace square brackets by 'null'
   ![image](https://github.com/user-attachments/assets/1e18cc6d-4ced-4b2f-9518-9b2f24e6ac70)
@@ -539,6 +556,7 @@ Ex: for arg = 8
 
 
 ### read_sdc proc - interpret IO delays and transition constraints
+
 #### Grep clock latency and port name from SDC file
   1. Similar to create clock constraints, create the file for opentimer
      ![image](https://github.com/user-attachments/assets/42336675-e2d9-429e-909a-8f36d07c9c26)
@@ -576,9 +594,8 @@ Ex: for arg = 8
   3. Only the search pattern changes, others remain the same
      ![image](https://github.com/user-attachments/assets/1abe5c3d-3d0d-4c32-bf31-5b6c46a9ca74)
 
-### Process bussed ports and configuration file creation
-#### Script to expand bussed input ports for arrival time constraints
 
+### Process bussed ports and configuration file creation
 
 #### Script to convert all bussed constraints to bit-blasted
 ![image](https://github.com/user-attachments/assets/392cb5e4-3b14-4c30-9c16-8bec1a9ebce5)
@@ -603,6 +620,7 @@ Ex: for arg = 8
 
 
 ### Quality of results (QoR) generation algorithm
+
 #### Script to obtain STA runtime
   1. As per EDA vendors, there are different formats
      ![image](https://github.com/user-attachments/assets/5b355a51-243e-4587-b1ec-89241c073809)
@@ -645,81 +663,3 @@ Ex: for arg = 8
   3. Use the string separator as per the headings
      ![image](https://github.com/user-attachments/assets/aa5d29a8-0bae-4e1b-b8c3-01cb0a792d0a)
      ![image](https://github.com/user-attachments/assets/27849bd3-1e94-469e-aa1d-08204c32e6e0)
-
-
-
-
-
-
-
-
-
-
-
-
-     
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
