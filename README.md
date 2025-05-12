@@ -27,7 +27,7 @@
 
 ## WORKSHOP SESSIONS ARE RECORED IN THE BELOW THORY AND PRACTICAL SESSIONS
   
-  --> [THEORY SESSIONS](https://github.com/prachurjyaghy/TCL_Workshop--From_Basic_to_Advanced_in_VLSI/blob/c0ad8ba90d45cbc6c19835ce4bf775f574ecb564/THEORY%20SESSIONS.md)
+  --> [THEORY SESSIONS](THEORY SESSIONS.md)
 
-  --> [LAB SESSIONS](https://github.com/prachurjyaghy/TCL_Workshop--From_Basic_to_Advanced_in_VLSI/blob/d3d754725632f34b5cb7cd73e00f983182c1dc38/LAB%20SESSIONS.md)
+  --> [LAB SESSIONS](LAB SESSIONS.md)
         
